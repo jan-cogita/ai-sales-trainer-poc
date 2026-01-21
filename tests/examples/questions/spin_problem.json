@@ -1,0 +1,37 @@
+{
+  "category": "Problem",
+  "description": "Questions exploring challenges, difficulties, and dissatisfactions",
+  "methodology_guidance": "Move to these quickly after minimal Situation questions. Use empathetic framing.",
+  "good_examples": [
+    {
+      "question": "I imagine managing IT across 3 locations must create some coordination challenges - what's been most difficult?",
+      "why_good": "Empathetic lead-in, specific context, open-ended"
+    },
+    {
+      "question": "What's been frustrating about the current system?",
+      "why_good": "Direct but open, invites emotional response"
+    },
+    {
+      "question": "Where do you find your team spending the most time on manual workarounds?",
+      "why_good": "Specific, implies understanding of common pain points"
+    },
+    {
+      "question": "What concerns keep you up at night regarding your current infrastructure?",
+      "why_good": "Personal, emotional, invites deeper sharing"
+    }
+  ],
+  "bad_examples": [
+    {
+      "question": "Do you have any problems?",
+      "why_bad": "Too vague, closed question, no context"
+    },
+    {
+      "question": "Is everything working well?",
+      "why_bad": "Closed question, invites 'yes' and ends exploration"
+    },
+    {
+      "question": "Are you happy with your current vendor?",
+      "why_bad": "Closed, leading, puts prospect on defensive"
+    }
+  ]
+}

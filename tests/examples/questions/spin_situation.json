@@ -1,0 +1,37 @@
+{
+  "category": "Situation",
+  "description": "Questions gathering factual background about the customer's current state",
+  "methodology_guidance": "Use sparingly (max 2-3). Prefer confirming over asking when possible.",
+  "good_examples": [
+    {
+      "question": "I noticed your company recently expanded to 3 new locations - is that still accurate?",
+      "why_good": "Confirms research rather than asking basic questions, shows preparation"
+    },
+    {
+      "question": "I understand you're running SAP for your ERP - how long have you been on that platform?",
+      "why_good": "Combines confirmation with a targeted follow-up question"
+    },
+    {
+      "question": "Your website mentions 200 employees across Germany - has that changed recently?",
+      "why_good": "Demonstrates research while inviting correction or elaboration"
+    }
+  ],
+  "bad_examples": [
+    {
+      "question": "How many employees do you have?",
+      "why_bad": "Basic fact that should be researched beforehand"
+    },
+    {
+      "question": "What does your company do?",
+      "why_bad": "Extremely basic - shows no preparation"
+    },
+    {
+      "question": "What systems are you currently using?",
+      "why_bad": "Too broad, could be researched partially"
+    },
+    {
+      "question": "What's your current setup? What tools do you use? How long have you had them? Who manages them?",
+      "why_bad": "Rapid-fire situation questions overwhelm and frustrate the prospect"
+    }
+  ]
+}

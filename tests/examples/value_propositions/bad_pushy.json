@@ -1,0 +1,50 @@
+{
+  "category": "Pushy Sales Approaches",
+  "description": "Examples of forbidden vocabulary and pushy sales tactics to avoid",
+  "bad_examples": [
+    {
+      "statement": "Our solution is the best on the market and I guarantee you'll see results within 30 days.",
+      "forbidden_words": ["best on market", "guarantee"],
+      "why_bad": "Superlative claims without evidence, guarantee that can't be backed up"
+    },
+    {
+      "statement": "This is a great deal and we can only offer it today - it's a limited time exclusive offer.",
+      "forbidden_words": ["great deal", "only today", "limited time", "exclusive offer"],
+      "why_bad": "High-pressure tactics, artificial urgency"
+    },
+    {
+      "statement": "Trust me, this is exactly what you need. Our industry-leading platform is a game-changer.",
+      "forbidden_words": ["trust me", "industry-leading", "game-changer"],
+      "why_bad": "Asking for trust instead of earning it, buzzwords without substance"
+    },
+    {
+      "statement": "Honestly, this is the most incredible, revolutionary solution you'll find. Believe me.",
+      "forbidden_words": ["honestly", "incredible", "revolutionary", "believe me"],
+      "why_bad": "Hyperbolic language, empty emphasis words"
+    },
+    {
+      "statement": "Our cutting-edge, best-in-class technology is guaranteed to transform your business.",
+      "forbidden_words": ["cutting-edge", "best-in-class", "guaranteed"],
+      "why_bad": "Stacked buzzwords, unsubstantiated claims"
+    }
+  ],
+  "forbidden_vocabulary_list": [
+    "best on market",
+    "industry-leading",
+    "guarantee/guaranteed",
+    "great deal",
+    "only today",
+    "limited time",
+    "exclusive offer",
+    "trust me",
+    "believe me",
+    "honestly (as emphasis)",
+    "amazing",
+    "incredible",
+    "revolutionary",
+    "cutting-edge",
+    "best-in-class",
+    "game-changer"
+  ],
+  "why_forbidden": "These phrases trigger skepticism in sophisticated buyers, signal inexperience, and create adversarial dynamics. They tell instead of ask, claim instead of demonstrate."
+}

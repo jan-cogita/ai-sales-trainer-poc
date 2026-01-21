@@ -1,0 +1,51 @@
+{
+  "scenario_id": "it-governance",
+  "name": "IT Governance Improvement - FinServ AG",
+  "company": "FinServ AG",
+  "industry": "Financial Services",
+  "contact": {
+    "name": "Sandra Weber",
+    "role": "CIO",
+    "personality": "Strategic, detail-oriented, politically savvy"
+  },
+  "situation": {
+    "company_size": "Large enterprise, 180 IT staff",
+    "business_units": "6 major + 3 support functions",
+    "governance_framework": "COBIT-based, inconsistent implementation",
+    "recent_events": "Audit findings, new regulations in 18 months"
+  },
+  "expected_pain_points": [
+    {
+      "pain": "IT projects often delayed or over budget",
+      "reveal_after": "1-2 good problem questions",
+      "monetization": "Last three projects averaged 35% over budget - EUR 2.5M in overruns last year"
+    },
+    {
+      "pain": "Shadow IT growing across business units",
+      "reveal_after": "2-3 good questions",
+      "monetization": "EUR 400,000 annually in shadow IT spending bypassing controls"
+    },
+    {
+      "pain": "Audit findings about documentation gaps",
+      "reveal_after": "3-4 good questions",
+      "monetization": "Proper remediation requires 6 FTEs for 8 months - EUR 800,000"
+    },
+    {
+      "pain": "Difficulty proving IT value to board",
+      "reveal_after": "5+ good questions with implication depth",
+      "monetization": "Non-compliance penalties could reach EUR 10 million"
+    },
+    {
+      "pain": "Personal credibility at stake",
+      "reveal_after": "Deep trust established through excellent questioning",
+      "monetization": "Board questioning if she's right person for digital transformation"
+    }
+  ],
+  "expected_objections": [
+    "We have tried consultants before",
+    "Internal politics make change difficult",
+    "Not sure external help is the answer",
+    "Need to see concrete ROI projections"
+  ],
+  "success_criteria": "Customer quantifies regulatory non-compliance risk and agrees to deeper assessment"
+}

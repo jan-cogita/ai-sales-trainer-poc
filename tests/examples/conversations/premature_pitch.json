@@ -1,0 +1,56 @@
+{
+  "name": "Premature Pitch Conversation",
+  "scenario_id": "cloud-migration",
+  "expected_score_range": [3, 5],
+  "expected_dimension_scores": {
+    "Patience": {"max": 5},
+    "SPIN Sequence": {"max": 5}
+  },
+  "transcript": [
+    {
+      "role": "assistant",
+      "content": "Good morning. I have about 30 minutes for this call."
+    },
+    {
+      "role": "user",
+      "content": "Great to meet you! I'm really excited to tell you about our cloud migration solution. We've helped dozens of manufacturing companies modernize their infrastructure."
+    },
+    {
+      "role": "assistant",
+      "content": "I see. We haven't even discussed what our situation is yet."
+    },
+    {
+      "role": "user",
+      "content": "Of course! Let me tell you what we offer - our platform provides 99.9% uptime guarantee and can reduce your IT costs by up to 40%. It's the best solution on the market."
+    },
+    {
+      "role": "assistant",
+      "content": "I've heard that claim from every vendor. You don't even know what our challenges are."
+    },
+    {
+      "role": "user",
+      "content": "You're absolutely right. What systems are you currently using?"
+    },
+    {
+      "role": "assistant",
+      "content": "We have on-premise servers that are about 7 years old."
+    },
+    {
+      "role": "user",
+      "content": "Perfect! Our solution is ideal for modernizing legacy infrastructure. We can provide you with a great deal if you sign up this quarter - it's a limited time offer."
+    },
+    {
+      "role": "assistant",
+      "content": "I don't respond to pressure tactics. Is there a point to this conversation beyond selling me something?"
+    },
+    {
+      "role": "user",
+      "content": "I apologize if it came across that way. Trust me, we genuinely want to help your business succeed."
+    },
+    {
+      "role": "assistant",
+      "content": "Trust is earned, not requested. I think we're done here."
+    }
+  ],
+  "notes": "Anti-pattern: Opens with pitch, uses forbidden vocabulary ('best on market', 'guarantee', 'great deal', 'limited time', 'trust me'), no discovery questions, doesn't understand customer's situation before proposing solutions"
+}

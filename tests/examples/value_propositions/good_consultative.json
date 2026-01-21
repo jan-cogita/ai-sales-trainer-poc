@@ -1,0 +1,30 @@
+{
+  "category": "Consultative Value Propositions",
+  "description": "NEPQ-compliant approaches to discussing value after proper discovery",
+  "good_examples": [
+    {
+      "context": "After customer quantified EUR 4M revenue at risk from downtime",
+      "statement": "Based on what you've shared about the EUR 4 million at risk, it might be worth exploring how other manufacturing companies have approached this. Would that be helpful?",
+      "why_good": "References customer's own numbers, tentative language ('might be'), asks permission"
+    },
+    {
+      "context": "After customer expressed frustration with IT team burnout",
+      "statement": "I'm not certain if our approach would work for your situation, but we've seen similar teams reduce their firefighting time significantly. Should I walk you through what that looked like?",
+      "why_good": "Disarming opener, references their specific pain, offers relevant case study"
+    },
+    {
+      "context": "After customer asked 'What do you recommend?'",
+      "statement": "That depends on a few factors. Given the EUR 800,000 remediation cost you mentioned, would it make sense to explore whether there's a way to address the audit findings while also setting up for the new regulations?",
+      "why_good": "Doesn't over-promise, uses their numbers, frames as question"
+    },
+    {
+      "context": "Addressing budget concerns",
+      "statement": "You mentioned budget is tight this quarter. I don't know if this applies to your situation, but some companies treat this as risk mitigation rather than discretionary IT spend. Would it be useful to discuss how others have framed similar investments?",
+      "why_good": "Acknowledges constraint, offers reframe without pushing, asks permission"
+    }
+  ],
+  "vocabulary_examples": {
+    "encouraged": ["possibly", "might be", "explore", "discuss", "find out", "in my experience", "it varies", "depends on"],
+    "disarming": ["I'm not sure if", "this might not apply", "I could be wrong", "not for everyone"]
+  }
+}

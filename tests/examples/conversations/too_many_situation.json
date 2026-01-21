@@ -1,0 +1,63 @@
+{
+  "name": "Too Many Situation Questions",
+  "scenario_id": "it-governance",
+  "expected_score_range": [4, 6],
+  "expected_dimension_scores": {
+    "SPIN Sequence": {"max": 5}
+  },
+  "transcript": [
+    {
+      "role": "assistant",
+      "content": "Good afternoon. Let's make this brief - I have a board meeting in an hour."
+    },
+    {
+      "role": "user",
+      "content": "Thank you for your time, Frau Weber. Can you tell me about your current IT governance framework?"
+    },
+    {
+      "role": "assistant",
+      "content": "We have COBIT-based processes, though implementation varies across business units."
+    },
+    {
+      "role": "user",
+      "content": "And how many business units do you have?"
+    },
+    {
+      "role": "assistant",
+      "content": "Six major ones, plus three support functions."
+    },
+    {
+      "role": "user",
+      "content": "What's your total IT headcount?"
+    },
+    {
+      "role": "assistant",
+      "content": "About 180 people. Is there a point to these basic questions?"
+    },
+    {
+      "role": "user",
+      "content": "I'm just trying to understand your situation. What tools do you use for project management?"
+    },
+    {
+      "role": "assistant",
+      "content": "Various - Jira, some teams use MS Project. I thought you would have researched this already. That information is in our annual report."
+    },
+    {
+      "role": "user",
+      "content": "What's your annual IT budget?"
+    },
+    {
+      "role": "assistant",
+      "content": "I'm not going to share that with someone who hasn't even demonstrated they understand our business. What are you really trying to learn here?"
+    },
+    {
+      "role": "user",
+      "content": "I apologize. What challenges are you facing with IT governance?"
+    },
+    {
+      "role": "assistant",
+      "content": "Shadow IT is a growing concern. But we're running low on time. Let's reschedule when you've done more homework."
+    }
+  ],
+  "notes": "Anti-pattern: 5+ Situation questions before any Problem questions, asks basic facts that should be researched, loses prospect's patience and trust, no confirming-over-asking technique"
+}

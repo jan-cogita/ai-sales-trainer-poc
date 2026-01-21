@@ -1,0 +1,82 @@
+{
+  "name": "Excellent Discovery Conversation",
+  "scenario_id": "cloud-migration",
+  "expected_score_range": [7, 10],
+  "expected_dimension_scores": {
+    "Patience": {"min": 7},
+    "Implication Depth": {"min": 7},
+    "SPIN Sequence": {"min": 7},
+    "Vocabulary Compliance": {"min": 6}
+  },
+  "transcript": [
+    {
+      "role": "assistant",
+      "content": "Good morning. I have about 30 minutes for this call."
+    },
+    {
+      "role": "user",
+      "content": "Thank you for making time, Herr Mueller. I noticed your company recently expanded to 3 new locations - is that still accurate?"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, that's right. We opened two sites in Bavaria and one in Saxony last year. You've done your homework."
+    },
+    {
+      "role": "user",
+      "content": "I imagine coordinating IT infrastructure across multiple locations creates some coordination challenges. What's been most difficult about that expansion?"
+    },
+    {
+      "role": "assistant",
+      "content": "Well, our servers are 7 years old and we've had increasing downtime issues. Just last month we had a full day outage that stopped production at two sites."
+    },
+    {
+      "role": "user",
+      "content": "A full day of production stopped - what impact did that have on your delivery commitments?"
+    },
+    {
+      "role": "assistant",
+      "content": "We had to delay three customer shipments. One of our biggest clients was not happy at all. My production manager was furious."
+    },
+    {
+      "role": "user",
+      "content": "When you mention the client wasn't happy - how does that affect your relationship with them going forward?"
+    },
+    {
+      "role": "assistant",
+      "content": "Honestly, they've started asking for backup supplier information. After 8 years of partnership. That's what really concerns me."
+    },
+    {
+      "role": "user",
+      "content": "That sounds serious. Do you have a sense of how much revenue is at risk if they were to reduce their orders or move to a competitor?"
+    },
+    {
+      "role": "assistant",
+      "content": "They represent about 15% of our annual revenue - roughly EUR 4 million. And replacing that business in today's market... it would take years."
+    },
+    {
+      "role": "user",
+      "content": "EUR 4 million at risk. And you mentioned your IT team is dealing with this aging infrastructure - how is that affecting them?"
+    },
+    {
+      "role": "assistant",
+      "content": "They're exhausted. Working weekends, constant firefighting. I've already lost one senior admin who got tired of the chaos. Recruiting a replacement has been impossible."
+    },
+    {
+      "role": "user",
+      "content": "If you could get your infrastructure stabilized and eliminate these outages, what would that mean for your ability to keep that major client?"
+    },
+    {
+      "role": "assistant",
+      "content": "It would be transformative. We could actually promise reliable delivery again. And my team could focus on improvements instead of just keeping the lights on. We need to do something - I just haven't figured out what."
+    },
+    {
+      "role": "user",
+      "content": "That makes sense. Before we explore any options, could you help me understand - what has stopped you from addressing this sooner?"
+    },
+    {
+      "role": "assistant",
+      "content": "Budget, mainly. And honestly, we didn't realize how bad it had gotten until that major outage. The board is now asking questions about our digital readiness."
+    }
+  ],
+  "notes": "Demonstrates: confirming-over-asking opener, proper S->P->I->N progression, no premature pitch, monetization questions that unlocked EUR 4M risk figure, empathetic framing"
+}

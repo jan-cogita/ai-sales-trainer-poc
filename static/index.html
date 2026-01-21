@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Sales Trainer</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Tab Navigation -->
+        <nav class="tab-nav">
+            <div class="tab-nav-inner">
+                <div class="app-title">AI Sales Trainer</div>
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="practice">Practice</button>
+                    <button class="tab-btn" data-tab="questions">Questions</button>
+                    <button class="tab-btn" data-tab="qualify">Qualify</button>
+                    <button class="tab-btn" data-tab="valueprop">Value Prop</button>
+                    <button class="tab-btn" data-tab="navigate">Navigate</button>
+                    <button class="tab-btn" data-tab="qa">Q&A</button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Tab Content Container -->
+        <div class="tab-content-container">
+
+            <!-- ========================================
+                 Tab 1: Practice (Existing Functionality)
+                 ======================================== -->
+            <div id="practiceTab" class="tab-content active">
+                <!-- Screen 1: Scenario Selection -->
+                <div id="scenarioScreen" class="screen">
+                    <header>
+                        <h1>Conversational Practice</h1>
+                        <p class="subtitle">Practice your consultative selling skills</p>
+                    </header>
+                    <main>
+                        <h2>Select a Scenario</h2>
+                        <div id="scenarioList" class="scenario-list">
+                            <div class="loading">Loading scenarios...</div>
+                        </div>
+                    </main>
+                </div>
+
+                <!-- Screen 2: Chat Interface -->
+                <div id="chatScreen" class="screen hidden">
+                    <header class="chat-header">
+                        <div class="header-left">
+                            <h1 id="scenarioTitle">Scenario</h1>
+                            <span id="personaInfo" class="persona-info"></span>
+                        </div>
+                        <button id="endSessionBtn" class="btn btn-secondary">End Session</button>
+                    </header>
+                    <main class="chat-main">
+                        <div id="chatMessages" class="chat-messages"></div>
+                        <div class="chat-input-area">
+                            <input type="text" id="messageInput" placeholder="Type your message..." disabled>
+                            <button id="sendBtn" class="btn btn-primary" disabled>Send</button>
+                        </div>
+                    </main>
+                </div>
+
+                <!-- Screen 3: Evaluation Results -->
+                <div id="evaluationScreen" class="screen hidden">
+                    <header>
+                        <h1>Session Evaluation</h1>
+                    </header>
+                    <main class="evaluation-main">
+                        <div class="overall-score">
+                            <div class="score-number" id="overallScore">0</div>
+                            <div class="score-label">Overall Score</div>
+                        </div>
+
+                        <div class="summary" id="evaluationSummary"></div>
+
+                        <div class="dimensions" id="dimensionScores"></div>
+
+                        <div class="feedback-section">
+                            <div class="strengths">
+                                <h3>Strengths</h3>
+                                <ul id="strengthsList"></ul>
+                            </div>
+                            <div class="improvements">
+                                <h3>Areas for Improvement</h3>
+                                <ul id="improvementsList"></ul>
+                            </div>
+                        </div>
+
+                        <button id="practiceAgainBtn" class="btn btn-primary btn-large">Practice Again</button>
+                    </main>
+                </div>
+            </div>
+
+            <!-- ========================================
+                 Tab 2: Questions (SPIN Question Creator)
+                 ======================================== -->
+            <div id="questionsTab" class="tab-content">
+                <header>
+                    <h1>SPIN Question Creator</h1>
+                    <p class="subtitle">Craft and improve your sales questions</p>
+                </header>
+                <main class="tool-main">
+                    <div class="tool-form">
+                        <div class="form-group">
+                            <label for="questionType">Question Type</label>
+                            <select id="questionType" class="form-select">
+                                <option value="situation">S - Situation</option>
+                                <option value="problem">P - Problem</option>
+                                <option value="implication">I - Implication</option>
+                                <option value="need-payoff">N - Need-Payoff</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="questionText">Your Question</label>
+                            <textarea id="questionText" class="form-textarea" rows="4" placeholder="Enter your sales question here..."></textarea>
+                        </div>
+                        <button id="analyzeQuestionBtn" class="btn btn-primary">Analyze Question</button>
+                    </div>
+
+                    <div id="questionResults" class="results-panel hidden">
+                        <h3>Analysis Results</h3>
+                        <div class="result-grid">
+                            <div class="result-item">
+                                <span class="result-label">Type Accuracy</span>
+                                <span id="typeAccuracy" class="result-value"></span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Quality Score</span>
+                                <span id="qualityScore" class="result-value"></span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Open-ended</span>
+                                <span id="isOpenEnded" class="result-value"></span>
+                            </div>
+                        </div>
+
+                        <div class="feedback-box">
+                            <h4>Strengths</h4>
+                            <ul id="questionStrengths"></ul>
+                        </div>
+
+                        <div class="feedback-box">
+                            <h4>Suggestions for Improvement</h4>
+                            <ul id="questionImprovements"></ul>
+                        </div>
+
+                        <div class="improved-version">
+                            <h4>Improved Version</h4>
+                            <p id="improvedQuestion" class="quote-box"></p>
+                        </div>
+                    </div>
+                </main>
+            </div>
+
+            <!-- ========================================
+                 Tab 3: Qualify (MEDDPICC)
+                 ======================================== -->
+            <div id="qualifyTab" class="tab-content">
+                <header>
+                    <h1>MEDDPICC Opportunity Qualifier</h1>
+                    <p class="subtitle">Assess and strengthen your deal qualification</p>
+                </header>
+                <main class="tool-main">
+                    <div class="tool-form">
+                        <div class="form-group">
+                            <label for="opportunityName">Opportunity Name</label>
+                            <input type="text" id="opportunityName" class="form-input" placeholder="e.g., Acme Corp - Enterprise License">
+                        </div>
+                        <div class="form-group">
+                            <label for="opportunityContext">What do you know about this deal?</label>
+                            <textarea id="opportunityContext" class="form-textarea" rows="8" placeholder="Describe the opportunity: key contacts, their needs, budget discussions, timeline, competitors involved, decision process..."></textarea>
+                        </div>
+                        <button id="analyzeQualificationBtn" class="btn btn-primary">Analyze Qualification</button>
+                    </div>
+
+                    <div id="qualifyResults" class="results-panel hidden">
+                        <div class="qualification-header">
+                            <div class="qual-score">
+                                <span id="qualScore" class="qual-score-number">0</span>
+                                <span class="qual-score-label">/100</span>
+                            </div>
+                            <div id="qualStatus" class="qual-status"></div>
+                        </div>
+
+                        <div class="meddpicc-grid">
+                            <div class="meddpicc-item" data-element="metrics">
+                                <div class="meddpicc-header">
+                                    <span class="meddpicc-letter">M</span>
+                                    <span class="meddpicc-name">Metrics</span>
+                                    <span id="metricsStatus" class="meddpicc-status"></span>
+                                </div>
+                                <div class="meddpicc-bar"><div id="metricsBar" class="meddpicc-fill"></div></div>
+                                <p id="metricsFeedback" class="meddpicc-feedback"></p>
+                            </div>
+                            <div class="meddpicc-item" data-element="economic_buyer">
+                                <div class="meddpicc-header">
+                                    <span class="meddpicc-letter">E</span>
+                                    <span class="meddpicc-name">Economic Buyer</span>
+                                    <span id="econBuyerStatus" class="meddpicc-status"></span>
+                                </div>
+                                <div class="meddpicc-bar"><div id="econBuyerBar" class="meddpicc-fill"></div></div>
+                                <p id="econBuyerFeedback" class="meddpicc-feedback"></p>
+                            </div>
+                            <div class="meddpicc-item" data-element="decision_criteria">
+                                <div class="meddpicc-header">
+                                    <span class="meddpicc-letter">D</span>
+                                    <span class="meddpicc-name">Decision Criteria</span>
+                                    <span id="decisionCriteriaStatus" class="meddpicc-status"></span>
+                                </div>
+                                <div class="meddpicc-bar"><div id="decisionCriteriaBar" class="meddpicc-fill"></div></div>
+                                <p id="decisionCriteriaFeedback" class="meddpicc-feedback"></p>
+                            </div>
+                            <div class="meddpicc-item" data-element="decision_process">
+                                <div class="meddpicc-header">
+                                    <span class="meddpicc-letter">D</span>
+                                    <span class="meddpicc-name">Decision Process</span>
+                                    <span id="decisionProcessStatus" class="meddpicc-status"></span>
+                                </div>
+                                <div class="meddpicc-bar"><div id="decisionProcessBar" class="meddpicc-fill"></div></div>
+                                <p id="decisionProcessFeedback" class="meddpicc-feedback"></p>
+                            </div>
+                            <div class="meddpicc-item" data-element="paper_process">
+                                <div class="meddpicc-header">
+                                    <span class="meddpicc-letter">P</span>
+                                    <span class="meddpicc-name">Paper Process</span>
+                                    <span id="paperProcessStatus" class="meddpicc-status"></span>
+                                </div>
+                                <div class="meddpicc-bar"><div id="paperProcessBar" class="meddpicc-fill"></div></div>
+                                <p id="paperProcessFeedback" class="meddpicc-feedback"></p>
+                            </div>
+                            <div class="meddpicc-item" data-element="identify_pain">
+                                <div class="meddpicc-header">
+                                    <span class="meddpicc-letter">I</span>
+                                    <span class="meddpicc-name">Identify Pain</span>
+                                    <span id="identifyPainStatus" class="meddpicc-status"></span>
+                                </div>
+                                <div class="meddpicc-bar"><div id="identifyPainBar" class="meddpicc-fill"></div></div>
+                                <p id="identifyPainFeedback" class="meddpicc-feedback"></p>
+                            </div>
+                            <div class="meddpicc-item" data-element="champion">
+                                <div class="meddpicc-header">
+                                    <span class="meddpicc-letter">C</span>
+                                    <span class="meddpicc-name">Champion</span>
+                                    <span id="championStatus" class="meddpicc-status"></span>
+                                </div>
+                                <div class="meddpicc-bar"><div id="championBar" class="meddpicc-fill"></div></div>
+                                <p id="championFeedback" class="meddpicc-feedback"></p>
+                            </div>
+                            <div class="meddpicc-item" data-element="competition">
+                                <div class="meddpicc-header">
+                                    <span class="meddpicc-letter">C</span>
+                                    <span class="meddpicc-name">Competition</span>
+                                    <span id="competitionStatus" class="meddpicc-status"></span>
+                                </div>
+                                <div class="meddpicc-bar"><div id="competitionBar" class="meddpicc-fill"></div></div>
+                                <p id="competitionFeedback" class="meddpicc-feedback"></p>
+                            </div>
+                        </div>
+
+                        <div class="priority-actions">
+                            <h4>Priority Actions</h4>
+                            <ol id="priorityActions"></ol>
+                        </div>
+                    </div>
+                </main>
+            </div>
+
+            <!-- ========================================
+                 Tab 4: Value Prop (Golden Circle)
+                 ======================================== -->
+            <div id="valuepropTab" class="tab-content">
+                <header>
+                    <h1>Value Proposition Workshop</h1>
+                    <p class="subtitle">Craft compelling value propositions using the Golden Circle</p>
+                </header>
+                <main class="tool-main">
+                    <div class="tool-form">
+                        <div class="form-group">
+                            <label for="targetCustomer">Target Customer</label>
+                            <input type="text" id="targetCustomer" class="form-input" placeholder="e.g., Mid-market SaaS companies struggling with churn">
+                        </div>
+                        <div class="form-group">
+                            <label for="valueProposition">Your Value Proposition</label>
+                            <textarea id="valueProposition" class="form-textarea" rows="6" placeholder="Enter your current value proposition..."></textarea>
+                        </div>
+                        <button id="analyzeValuePropBtn" class="btn btn-primary">Analyze Value Prop</button>
+                    </div>
+
+                    <div id="valuepropResults" class="results-panel hidden">
+                        <div class="valueprop-score">
+                            <span class="score-label">Overall Score</span>
+                            <span id="vpOverallScore" class="score-number">0</span>
+                            <span class="score-max">/10</span>
+                        </div>
+
+                        <h4>Golden Circle Analysis</h4>
+                        <div class="golden-circle-grid">
+                            <div class="gc-item">
+                                <div class="gc-header">
+                                    <span class="gc-label">WHY</span>
+                                    <span class="gc-sublabel">Purpose</span>
+                                    <span id="whyStatus" class="gc-status"></span>
+                                </div>
+                                <div class="gc-bar"><div id="whyBar" class="gc-fill"></div></div>
+                                <p id="whyFeedback" class="gc-feedback"></p>
+                            </div>
+                            <div class="gc-item">
+                                <div class="gc-header">
+                                    <span class="gc-label">HOW</span>
+                                    <span class="gc-sublabel">Process</span>
+                                    <span id="howStatus" class="gc-status"></span>
+                                </div>
+                                <div class="gc-bar"><div id="howBar" class="gc-fill"></div></div>
+                                <p id="howFeedback" class="gc-feedback"></p>
+                            </div>
+                            <div class="gc-item">
+                                <div class="gc-header">
+                                    <span class="gc-label">WHAT</span>
+                                    <span class="gc-sublabel">Product</span>
+                                    <span id="whatStatus" class="gc-status"></span>
+                                </div>
+                                <div class="gc-bar"><div id="whatBar" class="gc-fill"></div></div>
+                                <p id="whatFeedback" class="gc-feedback"></p>
+                            </div>
+                        </div>
+
+                        <div class="customer-focus">
+                            <span class="cf-label">Customer Focus</span>
+                            <div class="cf-meter">
+                                <div id="customerFocusBar" class="cf-fill"></div>
+                            </div>
+                            <span id="customerFocusValue" class="cf-value"></span>
+                            <p id="customerFocusFeedback" class="cf-feedback"></p>
+                        </div>
+
+                        <div class="improved-version">
+                            <h4>Improved Version</h4>
+                            <p id="improvedValueProp" class="quote-box"></p>
+                        </div>
+                    </div>
+                </main>
+            </div>
+
+            <!-- ========================================
+                 Tab 5: Navigate (Opportunity Navigator)
+                 ======================================== -->
+            <div id="navigateTab" class="tab-content">
+                <header>
+                    <h1>Opportunity Navigator</h1>
+                    <p class="subtitle">Get AI-powered recommendations for your next best action</p>
+                </header>
+                <main class="tool-main">
+                    <div class="tool-form">
+                        <div class="form-group">
+                            <label for="salesStage">Current Sales Stage</label>
+                            <select id="salesStage" class="form-select">
+                                <option value="">Select a stage...</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="navContext">Opportunity Context</label>
+                            <textarea id="navContext" class="form-textarea" rows="6" placeholder="Describe the current situation: recent activities, challenges, what happened in last meeting..."></textarea>
+                        </div>
+                        <button id="getRecommendationBtn" class="btn btn-primary">Get Recommendation</button>
+                    </div>
+
+                    <div id="navigateResults" class="results-panel hidden">
+                        <div class="next-action-card">
+                            <h3>Next Best Action</h3>
+                            <p id="nextAction" class="next-action-text"></p>
+                            <div class="action-meta">
+                                <span class="action-urgency">Urgency: <strong id="actionUrgency"></strong></span>
+                                <span class="action-timing">Timing: <strong id="actionTiming"></strong></span>
+                            </div>
+                        </div>
+
+                        <div class="nav-section">
+                            <h4>Preparation Steps</h4>
+                            <ul id="prepSteps"></ul>
+                        </div>
+
+                        <div class="nav-section">
+                            <h4>Questions to Ask</h4>
+                            <ul id="questionsToAsk"></ul>
+                        </div>
+
+                        <div class="nav-section warning">
+                            <h4>Red Flags to Watch</h4>
+                            <ul id="redFlags"></ul>
+                        </div>
+                    </div>
+                </main>
+            </div>
+
+            <!-- ========================================
+                 Tab 6: Q&A (RAG Knowledge Base)
+                 ======================================== -->
+            <div id="qaTab" class="tab-content">
+                <header>
+                    <h1>Sales Knowledge Q&A</h1>
+                    <p class="subtitle">Ask questions about sales methodologies and best practices</p>
+                </header>
+                <main class="tool-main">
+                    <div class="tool-form">
+                        <div class="form-group">
+                            <label for="qaQuestion">Ask a question</label>
+                            <div class="input-with-button">
+                                <input type="text" id="qaQuestion" class="form-input" placeholder="e.g., How do I handle price objections?">
+                                <button id="askQuestionBtn" class="btn btn-primary">Ask</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="qaResults" class="results-panel hidden">
+                        <div class="qa-answer">
+                            <h4>Answer</h4>
+                            <div id="qaAnswer" class="answer-content"></div>
+                        </div>
+
+                        <div class="qa-sources">
+                            <h4>Sources</h4>
+                            <ul id="qaSources"></ul>
+                        </div>
+                    </div>
+
+                    <div class="knowledge-base-section">
+                        <h3>Knowledge Base</h3>
+                        <div id="documentList" class="document-list">
+                            <div class="loading">Loading documents...</div>
+                        </div>
+                        <div class="upload-section">
+                            <input type="file" id="fileUpload" accept=".txt,.pdf,.md" hidden>
+                            <button id="uploadBtn" class="btn btn-secondary">Upload Document</button>
+                        </div>
+                    </div>
+                </main>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>

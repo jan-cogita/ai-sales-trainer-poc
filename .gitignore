@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# uv
+.uv/
+uv.lock
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Data directories (ignore contents but keep folder structure)
+data/*
+!data/.gitkeep
+
+# Logs (ignore contents but keep folder structure)
+*.log
+logs/*
+!logs/.gitkeep
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+tests/outputs/*
+!tests/outputs/.gitkeep
+
+# Linting
+.ruff_cache/
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,45 @@
+{
+  "category": "Implication",
+  "description": "Questions exploring consequences, impact, and cost of problems",
+  "methodology_guidance": "This is where value is created. Probe for monetization - costs, time, resources.",
+  "good_examples": [
+    {
+      "question": "What impact does the downtime have on your production schedule?",
+      "why_good": "Explores business consequence, invites quantification"
+    },
+    {
+      "question": "How does that affect your team's ability to meet deadlines?",
+      "why_good": "Links problem to broader business outcome"
+    },
+    {
+      "question": "When the system goes down, how much does each hour of lost production cost you?",
+      "why_good": "Directly asks for monetization of the pain"
+    },
+    {
+      "question": "What happens to customer satisfaction when these delays occur?",
+      "why_good": "Explores ripple effects beyond immediate problem"
+    },
+    {
+      "question": "If this continues for another year, what's the cumulative impact on your business?",
+      "why_good": "Forces prospect to project future cost of inaction"
+    },
+    {
+      "question": "How does this problem affect other departments beyond IT?",
+      "why_good": "Expands scope of perceived impact"
+    }
+  ],
+  "bad_examples": [
+    {
+      "question": "Is downtime a problem?",
+      "why_bad": "Closed question, no implication depth"
+    },
+    {
+      "question": "Does that cause issues?",
+      "why_bad": "Vague, closed, doesn't explore consequences"
+    },
+    {
+      "question": "That must be frustrating, right?",
+      "why_bad": "Leading, doesn't uncover specific impact"
+    }
+  ]
+}

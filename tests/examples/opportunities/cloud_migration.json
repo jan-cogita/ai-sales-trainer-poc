@@ -1,0 +1,46 @@
+{
+  "scenario_id": "cloud-migration",
+  "name": "Cloud Migration Opportunity - Mueller Manufacturing",
+  "company": "Mueller Manufacturing GmbH",
+  "industry": "Manufacturing",
+  "contact": {
+    "name": "Thomas Mueller",
+    "role": "CEO",
+    "personality": "Analytical, cautious, data-driven"
+  },
+  "situation": {
+    "company_size": "200 employees",
+    "locations": "3 sites (2 Bavaria, 1 Saxony)",
+    "current_infrastructure": "7-year-old on-premise servers",
+    "recent_events": "Recent downtime causing production issues"
+  },
+  "expected_pain_points": [
+    {
+      "pain": "Server downtime causing production delays",
+      "reveal_after": "1-2 good problem questions",
+      "monetization": "Each hour costs approximately EUR 15,000 in lost production"
+    },
+    {
+      "pain": "IT team overwhelmed with maintenance",
+      "reveal_after": "3-4 good questions showing understanding",
+      "monetization": "20+ hours overtime weekly, roughly EUR 8,000/month extra"
+    },
+    {
+      "pain": "Difficulty accessing data remotely",
+      "reveal_after": "3-4 good questions",
+      "monetization": "Lost two contracts last quarter worth EUR 500,000"
+    },
+    {
+      "pain": "Security concerns with aging infrastructure",
+      "reveal_after": "5+ good questions including implication probes",
+      "monetization": "Insurance premium increase threat of 40%"
+    }
+  ],
+  "expected_objections": [
+    "Not sure if now is the right time",
+    "Concerned about migration risks",
+    "Budget is tight this quarter",
+    "Team might resist change"
+  ],
+  "success_criteria": "Customer articulates the cost of inaction and asks about next steps"
+}

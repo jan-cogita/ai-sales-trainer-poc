@@ -1,0 +1,109 @@
+NEPQ OPENING PATTERN - OUTBOUND CALLS
+(When you are initiating contact - cold call, prospecting, follow-up on research)
+
+---
+
+CORE PRINCIPLE:
+In outbound situations, you are interrupting the prospect's day. The NEPQ approach requires acknowledging this intrusion while using disarming techniques to reduce immediate resistance.
+
+---
+
+OPENING TEMPLATE:
+
+"Hello [Name], this is [Your Name] from [Company]. We don't know each other yet, and I hope I'm not interrupting anything important. I'm calling because [specific research-based reason]. To be honest, I'm not sure if this is relevant for you at all - would you have a moment to find out?"
+
+---
+
+KEY ELEMENTS:
+
+1. HONEST ACKNOWLEDGMENT:
+   - "We don't know each other yet..."
+   - "I hope I'm not interrupting..."
+   - "You weren't expecting my call..."
+
+   Purpose: Acknowledges the cold call reality, shows self-awareness
+
+2. RESEARCH-BASED REASON:
+   - "I noticed your company recently [specific observation]..."
+   - "I came across [article/news/LinkedIn post] about..."
+   - "We've been working with companies in [their industry] who..."
+
+   Purpose: Shows you've done homework, not just dialing randomly
+
+3. UNCERTAINTY FRAMING:
+   - "I'm not sure if this is relevant for you..."
+   - "I don't know if you're even dealing with this..."
+   - "This might not apply to your situation..."
+
+   Purpose: Reduces pressure, invites honest response
+
+4. PERMISSION REQUEST:
+   - "Would you have a moment to find out?"
+   - "Could I ask you a quick question?"
+   - "Is this a terrible time?"
+
+   Purpose: Respects their time, creates micro-commitment
+
+---
+
+OPENING VARIATIONS:
+
+Research-Based (Strongest):
+"Hello [Name], this is [Your Name]. We haven't spoken before. I was doing some research on [Company] and noticed [specific observation - e.g., job postings for DevOps, recent expansion announcement, industry challenge]. Companies in that situation sometimes struggle with [relevant problem]. I genuinely don't know if that applies to you - would it make sense to take 2 minutes to find out?"
+
+Trigger Event:
+"Hi [Name], [Your Name] here from [Company]. I came across [news/announcement/article] about your organization, and it made me wonder if you might be facing [related challenge]. I could be completely off base here - do you have 30 seconds so I can find out if this call is worth continuing?"
+
+Pattern Interrupt:
+"Hello [Name], this is a sales call from [Company], so I understand if you want to hang up. Before you do - I've been working with [similar company/role] on [specific challenge]. If that sounds familiar, it might be worth 2 minutes. If not, I'll let you get back to your day. What do you think?"
+
+Referral/Connection:
+"Hi [Name], this is [Your Name]. [Mutual connection] suggested I reach out, though they weren't sure if you'd be dealing with [topic]. I'm not either, honestly. Would it make sense to quickly find out if there's a reason to talk further?"
+
+---
+
+WHAT TO AVOID IN OPENINGS:
+
+- "How are you today?" (Signals sales call immediately)
+- "Did I catch you at a bad time?" (Always yes)
+- "I'm calling from [Company] and we help companies like yours..." (Pitch mode)
+- "I'd like to tell you about..." (One-way communication)
+- "We're the leading provider of..." (Nobody cares)
+- Fake familiarity or enthusiasm
+- Long introductions about yourself or company
+- Starting with features or benefits
+
+---
+
+TONE GUIDELINES:
+
+- Calm and unbothered (not apologetic, not aggressive)
+- Genuine curiosity, not scripted
+- Comfortable with "no" (not desperate)
+- Conversational, not performative
+- Slightly slower pace than typical sales calls
+- Neutral about outcome
+
+---
+
+HANDLING INITIAL RESISTANCE:
+
+"I'm busy":
+"Completely understand. Would there be a better time, or should I just send you a brief email with why I called?"
+
+"Not interested":
+"That's fair - you don't even know what this is about yet. Can I take 15 seconds to explain why I called? If it's not relevant, I'll let you go."
+
+"We already have a solution":
+"That makes sense - most companies I call do. I'm curious though, [specific question about satisfaction/challenges]? If everything's working well, I'll leave you alone."
+
+---
+
+POST-OPENING TRANSITION:
+
+If they agree to continue, use "confirming over asking":
+- "Based on my research, I imagine [hypothesis about their situation]. Is that accurate?"
+- "Companies in your position often deal with [common challenge]. Does that resonate at all?"
+- "I'm guessing that [informed assumption] - am I on the right track or completely off?"
+
+Remember: In outbound, you have 10-15 seconds to earn the next 60 seconds. A disarming, honest opening is more effective than any clever pitch.

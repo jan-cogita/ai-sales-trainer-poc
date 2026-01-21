@@ -1,0 +1,64 @@
+{
+  "name": "Good Problem Monetization",
+  "scenario_id": "it-governance",
+  "expected_score_range": [6, 9],
+  "expected_dimension_scores": {
+    "Implication Depth": {"min": 7},
+    "Monetization Quality": {"min": 7}
+  },
+  "transcript": [
+    {
+      "role": "assistant",
+      "content": "Good afternoon. Let's make this brief - I have a board meeting in an hour."
+    },
+    {
+      "role": "user",
+      "content": "I appreciate your time, Frau Weber. I understand FinServ AG recently received some audit findings related to IT governance - is addressing those a priority for you?"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, it's become quite urgent. We have documentation gaps and the auditors flagged several control weaknesses."
+    },
+    {
+      "role": "user",
+      "content": "What happens if those gaps aren't addressed before the next audit cycle?"
+    },
+    {
+      "role": "assistant",
+      "content": "We risk regulatory penalties. With the new regulations coming in 18 months, the stakes are even higher."
+    },
+    {
+      "role": "user",
+      "content": "When you say regulatory penalties - do you have a sense of the financial exposure if the issues aren't resolved?"
+    },
+    {
+      "role": "assistant",
+      "content": "Based on comparable cases, we're looking at potential fines of EUR 5-10 million. And that's not counting reputation damage."
+    },
+    {
+      "role": "user",
+      "content": "EUR 10 million potential exposure. And the remediation work itself - what resources would that require internally?"
+    },
+    {
+      "role": "assistant",
+      "content": "To do it properly? We'd need at least 6 full-time equivalents for 8 months. That's roughly EUR 800,000 in salary costs alone, plus opportunity cost of pulling people from other projects."
+    },
+    {
+      "role": "user",
+      "content": "So between potential penalties and remediation costs, you're looking at possibly EUR 10 million or more at stake. How does the board view this situation?"
+    },
+    {
+      "role": "assistant",
+      "content": "They're concerned. Frankly, they've started questioning whether I'm the right person to lead our digital transformation. My credibility is on the line here."
+    },
+    {
+      "role": "user",
+      "content": "That's a difficult position. If you could demonstrate clear progress on this within the next quarter, what would that mean for your standing with the board?"
+    },
+    {
+      "role": "assistant",
+      "content": "It would be significant. I could finally have a constructive conversation about IT investment instead of constantly defending our current state. What approaches have you seen work in similar situations?"
+    }
+  ],
+  "notes": "Demonstrates: Confirming opener, quick move to Problem/Implication, explicit monetization questions that unlocked EUR 10M exposure and EUR 800K remediation costs, connected to personal/political stakes, earned the right to discuss solutions"
+}

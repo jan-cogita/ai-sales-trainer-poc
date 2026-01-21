@@ -1,0 +1,35 @@
+{
+  "methodology": "SPIN",
+  "description": "Situation, Problem, Implication, Need-Payoff questioning methodology",
+  "origin": "Neil Rackham, based on analysis of 35,000+ sales calls",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of Situation questions?",
+      "answer": "Situation questions gather factual background about the customer's current state. However, they should be used sparingly (max 2-3) because customers find them boring and they don't create value. Prefer confirming information you've researched rather than asking basic questions."
+    },
+    {
+      "question": "Why should Problem questions come before Implication questions?",
+      "answer": "Problem questions identify dissatisfactions and difficulties. You need to surface problems before you can explore their implications. However, don't spend too long here - move to Implication questions to build urgency."
+    },
+    {
+      "question": "Why are Implication questions the most important?",
+      "answer": "Implication questions explore the consequences and effects of problems. They help customers realize the true cost of their issues, creating urgency to change. This is where value is created in consultative selling. Ask about financial impact, time costs, effects on other teams, and future consequences."
+    },
+    {
+      "question": "What is the goal of Need-Payoff questions?",
+      "answer": "Need-Payoff questions get customers to articulate the benefits of solving their problem. By this phase, the customer should be doing 70%+ of the talking, essentially selling themselves on the need for a solution. Questions like 'How would it help if...?' let customers paint their own vision of success."
+    },
+    {
+      "question": "How many Situation questions should you ask?",
+      "answer": "Maximum 2-3 Situation questions. Each one after that decreases your chances of success. Research before the call and use the confirming-over-asking technique: 'I noticed your company has X - is that still accurate?' This shows preparation and respects the customer's time."
+    },
+    {
+      "question": "What is confirming-over-asking?",
+      "answer": "Instead of asking basic questions like 'How many employees do you have?', confirm what you've researched: 'I understand you have about 200 employees across 3 locations - is that still accurate?' This demonstrates preparation, respects time, and often yields more information."
+    },
+    {
+      "question": "What is the SPIN sequence violation?",
+      "answer": "Going backwards in the sequence (e.g., asking Situation questions after Implication questions) is a sequence violation. Small deviations are okay, but repeatedly jumping back to earlier phases signals lack of control over the conversation and frustrates customers."
+    }
+  ]
+}

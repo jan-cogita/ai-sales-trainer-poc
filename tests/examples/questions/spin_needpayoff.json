@@ -1,0 +1,41 @@
+{
+  "category": "Need-Payoff",
+  "description": "Questions about the value and benefits of solving the problem",
+  "methodology_guidance": "Let the customer sell themselves on the solution. They should talk 70%+ here.",
+  "good_examples": [
+    {
+      "question": "If you could eliminate those production delays, what would that mean for your quarterly targets?",
+      "why_good": "Lets customer articulate value in their own terms"
+    },
+    {
+      "question": "How would it help if your team could access data from any location securely?",
+      "why_good": "Paints positive picture, invites customer to elaborate"
+    },
+    {
+      "question": "What would change for your team if this problem was solved?",
+      "why_good": "Open-ended, lets customer paint the vision"
+    },
+    {
+      "question": "If we could reduce that downtime by 90%, what would you do with those recovered hours?",
+      "why_good": "Specific improvement framing, invites planning"
+    },
+    {
+      "question": "How would solving this impact your position with the board?",
+      "why_good": "Connects to personal/political benefits"
+    }
+  ],
+  "bad_examples": [
+    {
+      "question": "Wouldn't it be great if this was fixed?",
+      "why_bad": "Rhetorical, doesn't invite real exploration"
+    },
+    {
+      "question": "Don't you want to solve this problem?",
+      "why_bad": "Pushy, closed, condescending"
+    },
+    {
+      "question": "Our solution would save you money - that's good, right?",
+      "why_bad": "Telling instead of asking, premature pitch"
+    }
+  ]
+}

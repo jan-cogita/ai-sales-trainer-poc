@@ -1,0 +1,39 @@
+{
+  "methodology": "NEPQ",
+  "description": "Neuro-Emotional Persuasion Questions - consultative vocabulary and techniques",
+  "origin": "Jeremy Miner, based on neuroscience and buyer psychology",
+  "qa_pairs": [
+    {
+      "question": "What is the disarming technique?",
+      "answer": "Disarming uses phrases like 'I'm not sure if we can help you' or 'This might not be the right fit' to reduce sales resistance. Counter-intuitively, expressing doubt about your ability to help makes prospects MORE interested because it signals you're not just trying to close a sale."
+    },
+    {
+      "question": "Why avoid words like 'guarantee' and 'best on market'?",
+      "answer": "Sophisticated buyers have heard these claims from every vendor. Superlatives trigger skepticism and make you sound like every other salesperson. Instead, use tentative language like 'possibly', 'might', 'in some cases' which sounds more honest and builds trust."
+    },
+    {
+      "question": "What is the push-pull technique?",
+      "answer": "Push-pull involves appearing to discourage the sale while actually increasing interest. Example: 'Based on what you've told me, I'm not sure our approach would work for you...' This triggers curiosity and removes the adversarial dynamic of traditional selling."
+    },
+    {
+      "question": "Why say 'I don't know' when you could give an answer?",
+      "answer": "Admitting uncertainty ('I don't know, but I can find out') builds tremendous trust. It signals honesty and expertise (only confident people admit gaps). It's far more credible than pretending to know everything, which customers see through immediately."
+    },
+    {
+      "question": "What vocabulary should salespeople avoid?",
+      "answer": "Avoid: 'best on market', 'industry-leading', 'guarantee', 'great deal', 'limited time', 'trust me', 'honestly', 'amazing', 'incredible', 'revolutionary', 'game-changer'. These words signal inexperience, trigger resistance, and damage credibility."
+    },
+    {
+      "question": "What vocabulary should salespeople use?",
+      "answer": "Use: 'possibly', 'perhaps', 'might be', 'explore', 'find out', 'discuss', 'I'm not sure if', 'it depends', 'in my experience', 'that's a fair point'. These signal expertise, humility, and collaborative intent."
+    },
+    {
+      "question": "How does tonality affect sales conversations?",
+      "answer": "Calm, measured tonality signals confidence and expertise. Excessive enthusiasm triggers skepticism ('Why are they trying so hard?'). Match the customer's energy level. When discussing serious business problems, a measured tone shows you take their concerns seriously."
+    },
+    {
+      "question": "What is problem monetization?",
+      "answer": "Problem monetization means quantifying the customer's pain in concrete terms: costs, time, resources, revenue at risk. Questions like 'How much does each hour of downtime cost?' help customers realize the true scale of their problems. This creates urgency without pushy tactics."
+    }
+  ]
+}
