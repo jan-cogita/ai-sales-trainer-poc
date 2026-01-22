@@ -15,7 +15,6 @@ ENV PATH="/root/.local/bin:$PATH"
 # Copy project files
 COPY pyproject.toml .
 COPY app/ ./app/
-COPY prompts/ ./prompts/
 COPY static/ ./static/
 
 # Install dependencies

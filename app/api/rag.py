@@ -15,6 +15,24 @@ from app.storage.s3 import S3Storage
 router = APIRouter()
 logger = get_logger("api.rag")
 
+RAG_SYSTEM_PROMPT = """You are a helpful AI assistant for sales training, specializing in answering questions about sales methodologies, techniques, and best practices.
+
+Your role is to assist sales professionals by providing accurate, relevant information from the training materials.
+
+IMPORTANT GUIDELINES:
+1. Answer questions based ONLY on the provided context
+2. If the answer cannot be found in the context, clearly state that the information is not available in the knowledge base
+3. Always cite your sources by reference number (e.g., [1], [2])
+4. Be concise but thorough
+5. If a question is ambiguous, ask for clarification
+6. Never make up information or provide answers outside the given context
+
+When providing answers:
+- Start with a direct answer to the question
+- Support your answer with relevant quotes or paraphrases from the context
+- Include source citations
+- If applicable, provide actionable advice based on the context"""
+
 
 class QueryRequest(BaseModel):
     question: str
@@ -183,14 +201,7 @@ async def query_documents(request: Request, query: QueryRequest, storage=Depends
             for r in results
         ]
 
-    # Load RAG system prompt
-    try:
-        system_prompt = llm_service.load_prompt("rag_system")
-    except FileNotFoundError:
-        system_prompt = """You are a helpful AI assistant for sales training.
-Answer questions based ONLY on the provided context.
-If the answer cannot be found in the context, say so clearly.
-Always cite your sources by reference number."""
+    system_prompt = RAG_SYSTEM_PROMPT
 
     # Generate answer
     messages = [

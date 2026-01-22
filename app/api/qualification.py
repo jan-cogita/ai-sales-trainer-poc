@@ -15,9 +15,6 @@ logger = get_logger("api.qualification")
 # CONSTANTS
 # =============================================================================
 
-DIMENSION_STATUS_STRONG = "strong"
-DIMENSION_STATUS_WEAK = "weak"
-DIMENSION_STATUS_MISSING = "missing"
 DEFAULT_SCORE = 0
 DEFAULT_STATUS = "needs-work"
 

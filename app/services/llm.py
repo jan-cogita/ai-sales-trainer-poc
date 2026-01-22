@@ -1,7 +1,6 @@
 """LLM service for embeddings and chat completions."""
 
 import time
-from pathlib import Path
 
 from google import genai
 from google.genai import types
@@ -178,10 +177,3 @@ class LLMService:
             config=config,
         )
         return response.text
-
-    def load_prompt(self, prompt_name: str) -> str:
-        """Load a prompt template from the prompts directory."""
-        prompt_path = Path("prompts") / f"{prompt_name}.txt"
-        if not prompt_path.exists():
-            raise FileNotFoundError(f"Prompt not found: {prompt_name}")
-        return prompt_path.read_text()
