@@ -15,7 +15,6 @@ logger = get_logger("api.navigation")
 # CONSTANTS
 # =============================================================================
 
-ANALYSIS_TEMPERATURE = 0.4
 DEFAULT_URGENCY = "medium"
 
 SALES_STAGES = [
@@ -173,7 +172,6 @@ async def get_navigation_recommendation(request: NavigationRequest):
     # Get LLM response
     result = await call_llm_json(
         messages=[{"role": "user", "content": prompt}],
-        temperature=ANALYSIS_TEMPERATURE,
         operation_name="Navigation recommendation",
     )
 

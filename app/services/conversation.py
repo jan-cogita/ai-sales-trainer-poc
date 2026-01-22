@@ -18,7 +18,6 @@ logger = get_logger("services.conversation")
 
 CONVERSATION_ID_LENGTH = 12
 MESSAGE_ID_LENGTH = 8
-CONVERSATION_TEMPERATURE = 0.8
 
 
 class ConversationStatus(str, Enum):
@@ -152,7 +151,6 @@ class ConversationService:
         opening_content = await self.llm_service.chat_completion(
             messages=[{"role": "user", "content": opening_prompt}],
             system_prompt=system_prompt,
-            temperature=CONVERSATION_TEMPERATURE,
         )
 
         # Add opening message
@@ -189,7 +187,6 @@ class ConversationService:
         ai_response = await self.llm_service.chat_completion(
             messages=messages,
             system_prompt=system_prompt,
-            temperature=CONVERSATION_TEMPERATURE,
         )
 
         # Add AI response
@@ -212,7 +209,7 @@ class ConversationService:
         self.store.update_status(conversation_id, ConversationStatus.COMPLETED)
 
         # Generate evaluation
-        evaluation = self._evaluate_conversation(conversation)
+        evaluation = await self._evaluate_conversation(conversation)
         self.store.set_evaluation(conversation_id, evaluation)
 
         logger.info(
@@ -222,10 +219,10 @@ class ConversationService:
 
         return evaluation
 
-    def _evaluate_conversation(self, conversation: Conversation) -> dict:
+    async def _evaluate_conversation(self, conversation: Conversation) -> dict:
         """Evaluate the conversation using the EvaluationService."""
         messages = [{"role": m.role, "content": m.content} for m in conversation.messages]
-        result = self.evaluation_service.evaluate(messages)
+        result = await self.evaluation_service.evaluate(messages)
         return result.to_dict()
 
     def get_conversation(self, conversation_id: str) -> Conversation | None:

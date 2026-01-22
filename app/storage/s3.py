@@ -10,7 +10,7 @@ class S3Storage(StorageBackend):
         bucket_name: str,
         aws_access_key_id: str,
         aws_secret_access_key: str,
-        region: str = "us-east-1",
+        region: str = "us-east-1", #TODO change
         prefix: str = "",
     ):
         self.bucket_name = bucket_name

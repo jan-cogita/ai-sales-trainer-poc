@@ -5,7 +5,7 @@ import time
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 
-from app.constants import DEFAULT_SCORE, LLM_TEMPERATURE_ANALYSIS
+from app.constants import DEFAULT_SCORE
 from app.logging_config import get_logger
 from app.utils import call_llm_json
 
@@ -169,7 +169,6 @@ async def review_value_proposition(request: ValuePropReviewRequest):
     # Get LLM response
     result = await call_llm_json(
         messages=[{"role": "user", "content": prompt}],
-        temperature=LLM_TEMPERATURE_ANALYSIS,
         operation_name="Value proposition review",
     )
 

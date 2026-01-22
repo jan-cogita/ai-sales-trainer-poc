@@ -3,7 +3,6 @@
 from dataclasses import dataclass
 
 from app.logging_config import get_logger
-from app.services.evaluation import EvaluationCriteria
 
 logger = get_logger("services.scenarios")
 
@@ -39,7 +38,6 @@ class Scenario:
     methodology: str  # spin, meddpicc, value-prop, objection-handling
     persona: CustomerPersona
     context: ScenarioContext
-    evaluation_criteria: EvaluationCriteria
 
     def to_dict(self) -> dict:
         return {
@@ -62,15 +60,6 @@ class Scenario:
                 "customer_objections": self.context.customer_objections,
                 "desired_outcome": self.context.desired_outcome,
                 "call_type": self.context.call_type,
-            },
-            "evaluation_criteria": {
-                "patience_weight": self.evaluation_criteria.patience_weight,
-                "implication_depth_weight": self.evaluation_criteria.implication_depth_weight,
-                "client_talk_ratio_weight": self.evaluation_criteria.client_talk_ratio_weight,
-                "question_type_weight": self.evaluation_criteria.question_type_weight,
-                "spin_sequence_weight": self.evaluation_criteria.spin_sequence_weight,
-                "vocabulary_compliance_weight": self.evaluation_criteria.vocabulary_compliance_weight,
-                "monetization_quality_weight": self.evaluation_criteria.monetization_quality_weight,
             },
         }
 
@@ -119,15 +108,6 @@ SCENARIOS: dict[str, Scenario] = {
                 "security_risk": "Our insurance company is threatening to raise premiums by 40% if we don't upgrade",
             },
         ),
-        evaluation_criteria=EvaluationCriteria(
-            patience_weight=25,
-            implication_depth_weight=30,
-            client_talk_ratio_weight=15,
-            question_type_weight=10,
-            spin_sequence_weight=10,
-            vocabulary_compliance_weight=5,
-            monetization_quality_weight=5,
-        ),
     ),
     "it-governance": Scenario(
         id="it-governance",
@@ -172,15 +152,6 @@ SCENARIOS: dict[str, Scenario] = {
                 "board_confidence": "The board has started questioning whether I'm the right person to lead digital transformation",
             },
         ),
-        evaluation_criteria=EvaluationCriteria(
-            patience_weight=20,
-            implication_depth_weight=35,
-            client_talk_ratio_weight=15,
-            question_type_weight=10,
-            spin_sequence_weight=10,
-            vocabulary_compliance_weight=5,
-            monetization_quality_weight=5,
-        ),
     ),
     "sourcing-partner": Scenario(
         id="sourcing-partner",
@@ -224,15 +195,6 @@ SCENARIOS: dict[str, Scenario] = {
                 "peak_season_risk": "If we can't stabilize before Black Friday, I estimate EUR 5-10 million in lost sales",
                 "career_risk": "Honestly? Another failed vendor project and I'm probably out of a job",
             },
-        ),
-        evaluation_criteria=EvaluationCriteria(
-            patience_weight=30,
-            implication_depth_weight=25,
-            client_talk_ratio_weight=15,
-            question_type_weight=10,
-            spin_sequence_weight=10,
-            vocabulary_compliance_weight=5,
-            monetization_quality_weight=5,
         ),
     ),
 }

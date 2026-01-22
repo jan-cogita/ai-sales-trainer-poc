@@ -20,7 +20,7 @@ logger = get_logger("llm")
 GEMINI_EMBEDDING_MODEL = "text-embedding-004"
 OPENAI_EMBEDDING_MODEL = "text-embedding-3-small"
 GEMINI_CHAT_MODEL = "gemini-2.0-flash-lite"
-OPENAI_CHAT_MODEL = "gpt-4o"
+OPENAI_CHAT_MODEL = "gpt-5-mini"
 
 
 class LLMService:
@@ -110,7 +110,6 @@ class LLMService:
         messages: list[dict],
         system_prompt: str | None = None,
         model: str | None = None,
-        temperature: float = 0.7,
     ) -> str:
         """Get chat completion from configured LLM provider."""
         start_time = time.perf_counter()
@@ -118,9 +117,9 @@ class LLMService:
 
         try:
             if provider == "openai":
-                result = await self._openai_chat(messages, system_prompt, model, temperature)
+                result = await self._openai_chat(messages, system_prompt, model)
             elif provider == "gemini":
-                result = await self._gemini_chat(messages, system_prompt, model, temperature)
+                result = await self._gemini_chat(messages, system_prompt, model)
             else:
                 raise ValueError(f"Unknown LLM provider: {provider}")
 
@@ -140,7 +139,6 @@ class LLMService:
         messages: list[dict],
         system_prompt: str | None,
         model: str | None,
-        temperature: float,
     ) -> str:
         """OpenAI chat completion."""
         model = model or OPENAI_CHAT_MODEL
@@ -153,7 +151,6 @@ class LLMService:
         response = self.openai_client.chat.completions.create(
             model=model,
             messages=all_messages,
-            temperature=temperature,
         )
         return response.choices[0].message.content
 
@@ -162,7 +159,6 @@ class LLMService:
         messages: list[dict],
         system_prompt: str | None,
         model: str | None,
-        temperature: float,
     ) -> str:
         """Gemini chat completion using google-genai SDK."""
         model_name = model or GEMINI_CHAT_MODEL
@@ -173,7 +169,6 @@ class LLMService:
             contents.append(types.Content(role=role, parts=[types.Part(text=msg["content"])]))
 
         config = types.GenerateContentConfig(
-            temperature=temperature,
             system_instruction=system_prompt,
         )
 

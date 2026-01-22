@@ -7,7 +7,7 @@ from fastapi import FastAPI
 from fastapi.responses import JSONResponse
 from fastapi.staticfiles import StaticFiles
 
-from app.api import chat, evaluate, navigation, qualification, questions, rag, scenarios, value_prop, voice
+from app.api import chat, navigation, qualification, questions, rag, scenarios, value_prop, voice
 from app.config import get_settings
 from app.logging_config import get_logger, setup_logging
 from app.services.vector_store import VectorStore
@@ -50,7 +50,6 @@ app = FastAPI(
 # Include routers
 app.include_router(rag.router, prefix="/rag", tags=["RAG"])
 app.include_router(voice.router, prefix="/voice", tags=["Voice"])
-app.include_router(evaluate.router, prefix="/evaluate", tags=["Evaluate"])
 app.include_router(chat.router, prefix="/chat", tags=["Chat"])
 app.include_router(scenarios.router, prefix="/scenarios", tags=["Scenarios"])
 app.include_router(questions.router, prefix="/questions", tags=["Questions"])

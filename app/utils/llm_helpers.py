@@ -11,7 +11,6 @@ from app.utils.json_parser import parse_llm_json_response
 async def call_llm_json(
     messages: list[dict],
     system_prompt: str | None = None,
-    temperature: float = 0.3,
     operation_name: str = "LLM call",
 ) -> dict:
     """Call LLM and parse JSON response with standard error handling.
@@ -19,7 +18,6 @@ async def call_llm_json(
     Args:
         messages: List of message dicts with 'role' and 'content' keys.
         system_prompt: Optional system prompt for the LLM.
-        temperature: Temperature for response generation.
         operation_name: Name of the operation for error messages.
 
     Returns:
@@ -33,7 +31,6 @@ async def call_llm_json(
         response_text = await llm_service.chat_completion(
             messages,
             system_prompt=system_prompt,
-            temperature=temperature,
         )
         return parse_llm_json_response(response_text)
     except json.JSONDecodeError:
