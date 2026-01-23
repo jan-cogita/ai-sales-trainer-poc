@@ -1004,7 +1004,7 @@ class QAApp {
         // Sources
         if (data.sources && data.sources.length > 0) {
             this.qaSources.innerHTML = data.sources.map(source => {
-                const sourceName = typeof source === 'string' ? source : source.document || source.name;
+                const sourceName = typeof source === 'string' ? source : source.source || source.document || source.name;
                 const pageInfo = source.page ? ` (page ${source.page})` : '';
                 return `<li>${this.escapeHtml(sourceName)}${pageInfo}</li>`;
             }).join('');

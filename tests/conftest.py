@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Any, Callable
 
 import pytest
+from asgi_lifespan import LifespanManager
 from httpx import ASGITransport, AsyncClient
 
 from app.main import app
@@ -300,12 +301,16 @@ def nepq_methodology() -> dict[str, Any]:
 async def client() -> AsyncClient:
     """Create an async HTTP client for testing the FastAPI app.
 
+    Uses LifespanManager to properly initialize app state (vector store, etc.)
+    before running tests.
+
     Yields:
         AsyncClient instance for making requests to the app
     """
-    transport = ASGITransport(app=app)
-    async with AsyncClient(transport=transport, base_url="http://test") as client:
-        yield client
+    async with LifespanManager(app):
+        transport = ASGITransport(app=app)
+        async with AsyncClient(transport=transport, base_url="http://test") as client:
+            yield client
 
 
 # =============================================================================

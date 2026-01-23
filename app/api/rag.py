@@ -22,7 +22,7 @@ Your role is to assist sales professionals by providing accurate, relevant infor
 IMPORTANT GUIDELINES:
 1. Answer questions based ONLY on the provided context
 2. If the answer cannot be found in the context, clearly state that the information is not available in the knowledge base
-3. Always cite your sources by reference number (e.g., [1], [2])
+3. Always cite your sources by filename (e.g., [document.pdf], [guide.txt])
 4. Be concise but thorough
 5. If a question is ambiguous, ask for clarification
 6. Never make up information or provide answers outside the given context
@@ -42,6 +42,7 @@ class QueryRequest(BaseModel):
 class QueryResponse(BaseModel):
     answer: str
     sources: list[dict]
+    sources_formatted: str
 
 
 class IngestResponse(BaseModel):
@@ -163,6 +164,7 @@ async def query_documents(request: Request, query: QueryRequest, storage=Depends
             return QueryResponse(
                 answer="I couldn't find any documents in the knowledge base.",
                 sources=[],
+                sources_formatted="",
             )
         sources = [{"source": "full_context", "score": 1.0, "chunk_index": None}]
     else:
@@ -180,16 +182,15 @@ async def query_documents(request: Request, query: QueryRequest, storage=Depends
             return QueryResponse(
                 answer="I couldn't find any relevant information in the knowledge base.",
                 sources=[],
+                sources_formatted="",
             )
 
-        # Build context from retrieved documents
-        # TODO: Use filenames as reference labels instead of [1], [2] so LLM cites
-        # actual document names (e.g., [sales-playbook.pdf]) for better UX.
+        # Build context from retrieved documents using filenames as reference labels
         context_parts = []
-        for i, result in enumerate(results, 1):
+        for result in results:
             text = result["metadata"].get("text", "")
             source = result["metadata"].get("source", "Unknown")
-            context_parts.append(f"[{i}] Source: {source}\n{text}")
+            context_parts.append(f"[{source}]\n{text}")
 
         context = "\n\n".join(context_parts)
         sources = [
@@ -219,7 +220,11 @@ async def query_documents(request: Request, query: QueryRequest, storage=Depends
         extra={"sources_found": len(sources), "duration_ms": duration_ms},
     )
 
-    return QueryResponse(answer=answer, sources=sources)
+    # Build deduplicated formatted sources list
+    unique_sources = list(dict.fromkeys(s.get("source") for s in sources if s.get("source")))
+    sources_formatted = "Sources:\n" + "\n".join(f"- {s}" for s in unique_sources) if unique_sources else ""
+
+    return QueryResponse(answer=answer, sources=sources, sources_formatted=sources_formatted)
 
 
 @router.get("/documents")
